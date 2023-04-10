@@ -20,4 +20,14 @@ This will start the Flask application on your local machine, listening on port 5
 
 
 
+To Test:
+Download the json collection
 
+Create new transactions
+Use: http://localhost:5000/transactions/new
+
+To Mine new blocks:
+Use: http://localhost:5000/mine
+
+To view the entire blockchain:
+Use: http://localhost:5000/chain
