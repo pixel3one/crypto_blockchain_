@@ -25,14 +25,18 @@ Crypto.postman_collection.json AND tool like Postman to POST and GET
 
 Create new transactions
 Use: http://localhost:5000/transactions/new
-
+<pre>
+```json
 {
     "message": "Transaction will be added to Block 2"
 }
-
+'''
+</pre>
 To Mine new blocks:
 Use: http://localhost:5000/mine
 
+<pre>
+```json
 {
     "delegate": null,
     "index": 18,
@@ -47,12 +51,15 @@ Use: http://localhost:5000/mine
         }
     ]
 }
+</pre>
+```json
 
 To view the entire blockchain:
 Use: http://localhost:5000/chain
 
 
-
+<pre>
+```json
 {
     "chain": [
         {
@@ -303,3 +310,5 @@ Use: http://localhost:5000/chain
         }
     ],
     "length": 18
+</pre>
+```json
