@@ -15,7 +15,7 @@ pip install Flask
 To run the application, save the code to a file called blockchain.py and then execute the following command in the terminal:
 
 
-python blockchain.py
+python crypto.py
 This will start the Flask application on your local machine, listening on port 5000. You can then interact with the API using tools like curl or Postman, or by simply accessing the endpoints through your web browser.
 
 
