@@ -1,14 +1,18 @@
 # crypto_blockchain_
 
-This is a simple implementation of a blockchain in Python using the Flask web framework. The Blockchain class defines the structure and methods for creating and managing the blockchain. It contains methods for registering nodes, validating chains, resolving conflicts, creating new blocks and transactions, and performing proof of stake for block creation.
+This is a simple implementation of a Proof of Stake (PoS) blockchain using the Flask web framework in Python. The blockchain implementation is represented by the Blockchain class, which maintains a chain of blocks, manages transactions, and supports node registration and conflict resolution. The Flask application provides HTTP endpoints to interact with the blockchain, such as mining a new block and retrieving the entire chain.
 
-The Flask web application exposes the following endpoints:
+Here's a brief overview of the key components in the code:
 
-/mine: This endpoint mines a new block on the blockchain. It retrieves the last block, gets the proof of stake value, and creates a new transaction with a mining reward. Then, it creates a new block with the proof of stake value and the hash of the last block, and returns a JSON object with the new block's details.
+Blockchain class: This class is responsible for managing the chain of blocks, transactions, and nodes in the network. It has methods for creating new blocks, adding transactions, registering nodes, and resolving conflicts, among others.
 
-/chain: This endpoint returns the full chain of the blockchain as a JSON object, along with its length.
+Proof of Stake (PoS): Unlike Proof of Work, which requires miners to solve a computationally intensive problem, Proof of Stake selects the node that will mine the next block based on its stake in the network. In this implementation, a simple round-robin selection is used to determine the delegate for each block.
 
-To run this application, you will need to have Flask and the necessary dependencies installed. You can install Flask using pip:
+Flask application: The Flask app exposes the following HTTP endpoints:
+
+/mine: Mines a new block and adds it to the blockchain.
+/chain: Returns the entire chain of blocks in the blockchain.
+Node registration: The register_node method allows nodes to join the network, and the resolve_conflicts method is responsible for ensuring that the nodes have a consistent view of the blockchain.
 
 
 pip install Flask
