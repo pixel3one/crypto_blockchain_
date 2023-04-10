@@ -21,7 +21,7 @@ This will start the Flask application on your local machine, listening on port 5
 
 
 To Test:
-Download the json collection
+Crypto.postman_collection.json AND tool like Postman to POST and GET
 
 Create new transactions
 Use: http://localhost:5000/transactions/new
